@@ -1,0 +1,383 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 20px;
+    margin-left: 5%;
+}
+
+.navbar-left a {
+    font-size: 20px;
+    color: white;
+    margin-right: 20%;
+    cursor: pointer;
+    margin-left: 20%;
+}
+
+.navbar-left img {
+    border-radius: 50%;
+}
+
+.navbar-right i {
+    font-size: 20px;
+    color: white;
+    margin-right: 15px;
+}
+
+.navbar-right .image-profile {
+    height: 35px; 
+    width: 35px; 
+    border-radius: 50%;
+    margin-bottom: -7%;
+    margin-right: 15px;
+    background-color: #fff;
+    border: 2px solid black;
+}
+
+/* Search bar di desktop */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    padding: 2.5px;
+    border-radius: 8px;
+    width: 40%;
+    margin-left: 40%;
+    height: 35px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 8px;
+    flex-grow: 1;
+    color: #fff;
+
+}
+
+
+.search-bar i {
+    color: #f0f0f0;
+    margin-right: 10px;
+}
+
+.profile-icon {
+    height: 25px;
+    width: 25px;
+    margin-left: 20px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+
+/* Sidebar kiri */
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 200px;
+    padding: 20px;
+    background-color: #141414;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    color: white;
+}
+
+.sidebar hr{
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.sidebar-kumpulan-berita, .sidebar-kumpulan-bidang{
+    margin-top: 30px;
+}
+
+.sidebar-kumpulan-harian-berita, .sidebar-kumpulan-bidang-bidang{
+ margin-top: 30px;
+}
+
+.sidebar-kumpulan-harian-berita a, .sidebar-kumpulan-bidang-bidang a{
+ text-decoration: none;
+ color:#fff;
+}
+.sidebar-kumpulan-harian-berita a:hover, .sidebar-kumpulan-bidang-bidang a:hover{
+ text-decoration: none;
+ color:#c4c4c4;
+}
+
+/* Konten Tengah */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+    margin-top: 70px; 
+    margin-left: 200px; 
+    padding: 20px;
+    gap: 20px;
+    max-width: 800px;
+}
+
+.post {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    color: #fff;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.post-header .user-info {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.post-header .user-info img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-header .user-info .username {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #fff;
+}
+
+.post-header .follow {
+    color: #007bff;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.profile-pic {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: #fff;
+}
+
+.post-details {
+    flex-grow: 1;
+}
+
+.post-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.post-options div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.post-options div i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.degree {
+    font-size: 0.8em;
+    color: gray;
+}
+
+.time {
+    font-size: 0.8em;
+    color: lightgray;
+}
+
+/* Tombol close di setiap post */
+.close-post {
+    cursor: pointer;
+    color: red;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.post-body {
+    margin-top: 15px;
+    color: #fff;
+}
+
+.chat-container{
+    margin-top: 10px;
+
+}
+
+#messageInput{
+    background-color: black;
+    padding: 5px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+#sendMessage, #joinGroup{
+    background-color: #007bff;
+    padding: 6.5px;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+
+.post-image {
+    margin-top: 15px;
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+    display: block;
+}
+
+/* Sidebar kanan iklan */
+.ads {
+    width: 250px;
+    background-color: #333;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 90px;
+    right: 0;
+    height:100%;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.ads img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.ads-teks{
+    color: #a1a1a1;
+    text-align: center;
+   font-size: 12px; 
+   background-color:#3e3e3e;
+   margin-right:-20px;
+   margin-left:-20px;
+   padding: 6px;
+   border-radius: 0 0 8px 8px;
+}
+
+.ad-item {
+    margin-bottom: 20px;
+}
+
+.ad-item img {
+    width: 100%;
+    height: 200px;
+    background-color: #ccc; /* Tambahkan titik koma */
+    display: block;
+}
+
+@media screen and (max-width: 1024px) {
+    .main-container {
+        margin-left: 0;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .search-bar input {
+        font-size: 12px;
+    }
+
+    .navbar-left .search-bar {
+        display: none;
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    .navbar-left, .navbar-right {
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 10px;
+    }
+
+    .ads {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .ads img {
+        margin-bottom: 10px;
+    }
+
+    /* Hapus atau sesuaikan kelas .content jika tidak digunakan */
+    /* .content {
+        margin-right: 0;
+    } */
+}

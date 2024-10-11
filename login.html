@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="icon" href="icon.jpg">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(0deg, rgba(51,51,51,1) 19%, rgba(20,20,20,1) 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            width: 350px;
+            text-align: center;
+            border: 1px solid #c3c3c3;
+        }
+
+        .login-form img {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+        }
+
+        .login-form h2 {
+            color: #fff;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Menambahkan jarak antara checkbox dan teks */
+    color: #fff;
+    font-size: 12px;
+}
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            right: 0;
+        }
+
+        input[type="checkbox"] {
+    margin: 0; /* Menghapus margin default */
+    width: auto; /* Memastikan checkbox tetap dengan ukuran default */
+}
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .google-login {
+            margin-top: 20px;
+        }
+
+        .register-text {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.register-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-form">
+            <img src="icon.jpg" alt="User Icon">
+            <h2>Slide Login Form</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="remember-me">
+                        <input type="checkbox" id="remember-me" name="remember-me"> Keep Me Logged In
+                    </label>
+                </div>
+                <button type="submit" class="btn">Log In</button>
+            </form>
+
+             <!-- Bagian baru untuk register -->
+        <p class="register-text">Belum punya akun? 
+            <a href="register.html">Daftar di sini</a>
+        </p>
+
+            <div class="google-login">
+                <div id="g_id_onload"
+                     data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                     data-context="signin"
+                     data-ux_mode="popup"
+                     data-login_uri="YOUR_LOGIN_URI"
+                     data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin"
+                     data-type="standard"
+                     data-shape="rectangular"
+                     data-theme="outline"
+                     data-text="sign_in_with"
+                     data-size="large"
+                     data-logo_alignment="left">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Menghentikan submit form default
+
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Cek jika email dan password tidak kosong
+            if (email && password) {
+                alert('Login berhasil! Mengalihkan ke Home...');
+                window.location.href = 'hari-ini.html'; // Pengalihan ke home.html
+            } else {
+                alert('Harap isi semua kolom!');
+            }
+
+            if (email && username) {
+                // Simpan data pengguna di localStorage
+                localStorage.setItem('email', email);
+                localStorage.setItem('username', username);
+                alert('Login berhasil! Mengalihkan ke Profile...');
+                window.location.href = 'profile.html'; // Pengalihan ke profile.html
+            } else {
+                alert('Harap isi semua kolom!');
+            }
+        });
+    </script>
+
+</body>
+</html>

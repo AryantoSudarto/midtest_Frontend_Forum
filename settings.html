@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chat Group</title>
+    <link rel="icon" href="icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+     #active{
+        color: aquamarine;
+     }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="icon.jpg" alt="group Logo" class="logo">
+            <a href="hari-ini.html"><i class="fa-solid fa-house icon-right"></i></a>
+            <a href="community.html"><i class="fa-solid fa-users"></i></a> <!-- Konsisten dengan fa-solid -->
+            <a href="#" id="active"><i class="fa-solid fa-gear"></i></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Apa yang ingin Anda tanyakan atau bagikan?">
+            <i class="fa-solid fa-search"></i> <!-- Konsisten dengan fa-solid -->
+        </div>
+        <div class="navbar-right">
+            <a href="profile.html"><img src="profile.jpg" alt="Profile" class="image-profile"></a>
+        </div>
+    </div>
+
+    <!-- Sidebar kiri -->
+    <div class="sidebar">
+        <h3>Settings</h3>
+        <br>
+        <hr>
+ <div class="sidebar-kumpulan-berita">
+    <div class="sidebar-kumpulan-harian-berita">
+        <a href="#" id="active">Settings</a>
+    </div>
+ </div>
+    </div>
+
+    <!-- Konten tengah -->
+    <div class="main-container">
+        <!-- Postingan -->
+        <div class="post">
+            <h2>Settings</h2>
+            <br>
+            <hr>
+            <div class="post-body">
+                <h4 style="margin-top: 10px;">Setting Display</h3>
+                    <div class="checkbox" style="margin-top: 10px;">
+                    <label for="checkbox1">
+                        <input type="checkbox" id="checkbox1" onclick="toggleCheck(this, 'checkbox2')"> Light
+                    </label>
+                    
+                    <label for="checkbox2">
+                        <input type="checkbox" id="checkbox2" onclick="toggleCheck(this, 'checkbox1')"> Dark
+                    </label>
+                <h4 style="margin-top: 20px;">Setting Languange</h3>
+                    <div class="option-select" style="margin-top: 10px;">
+                    <select id="languages" name="languages">
+                        <option value="" disabled selected>Pilih salah satu</option>
+                        <option value="indonesia">Bahasa Indonesia</option>
+                        <option value="english">English</option>
+                        <option value="spanish">Español</option>
+                        <option value="french">Français</option>
+                        <option value="german">Deutsch</option>
+                    </select>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Kanan (Iklan) -->
+    <div class="ads">
+        <div class="ad-item">
+            <img src="iklan1.jpg" alt="Iklan">
+        </div>
+        <div class="ad-item">
+            <img src="iklan2.jpg" alt="Iklan">
+        </div>
+        <div class="ads-teks">
+           <p>Iklan</p>
+        </div>
+    </div>
+    
+    <script>
+    function toggleCheck(checkbox, otherCheckboxId) {
+        const otherCheckbox = document.getElementById(otherCheckboxId);
+        
+        if (checkbox.checked) {
+            // Jika checkbox ini dicentang, hapus centang pada yang lain
+            otherCheckbox.checked = false;
+        }
+    }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
